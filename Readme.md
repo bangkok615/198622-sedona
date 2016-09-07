@@ -1,7 +1,9 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Майкл Грин](https://up.htmlacademy.ru/adaptive/8/user/198622).
-* Наставник: `Вадим Новаш.
+<<<<<<< HEAD
+* Наставник: Вадим Новаш  https://github.com/stakeout
+>>>>>>> 7c78b129228c86a81d9f59d07d3438ab3ba3ed81
 
 ---
 
