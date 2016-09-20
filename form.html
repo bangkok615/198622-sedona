@@ -5,35 +5,35 @@
 	<title>Sedona Форма</title>
 </head>
 <body>
-	<div class="wrap">
-		<header class="header">
+	<div class="page-wrapper">
+
+		<header class="page-header">
 			<nav class="main-menu">
-				<a href="#">
-					<span class="main-menu main-menu--open main-menu--close"></span>
-				</a>
-				<ul class="main-menu-list">
-					<li class="main-menu-list__item">
-						<a href="index.html" class="main-menu-list__link">главная</a>
+				<input type="checkbox" name="checkbox" id="burger">
+				<label for="burger" class=" main-menu__toggler main-menu__toggler--close"></label>
+				<ul class="main-menu__list">
+					<li class="main-menu__item">
+						<a href="#" class="main-menu__link">главная</a>
 					</li>
-					<li class="main-menu-list__item">
-						<a href="photo.html" class="main-menu-list__link">фото и видео</a>
+					<li class="main-menu__item">
+						<a href="photo.html" class="main-menu__link main-menu__link--active">фото и видео</a>
 					</li>
-					<li class="main-menu-list__item">
-						<a href="#" class="main-menu-list__link">форма отзыва</a>
+					<li class="main-menu__item">
+						<a href="form.html" class="main-menu__link">форма отзыва</a>
 					</li>
-					<li class="main-menu-list__item">
-						<a href="https://htmlacademy.ru/" class="main-menu-list__link"  target="_blank">html academy</a>
+					<li class="main-menu__item">
+						<a href="https://htmlacademy.ru/" class="main-menu__link"  target="_blank">html academy</a>
 					</li>
 				</ul>
 			</nav>
+			<div class="logo-sedona">
+				<img src="http://placehold.it/100x80" alt="logo" width="100" height="80"></div>
 		</header>
-		<main class="main-page-m">
-			<div class="sedona-intro-img--small">
-				<div class="logo-sedona">
-					<img src="http://placehold.it/100x80" alt="logo" width="100" height="80"></div>
-				<div class="sedona-img--small">
-					<img src="http://placehold.it/320x155" alt="" width="320" height="155"></div>
-			</div>
+		<main class="page-content">
+			<div class="sedona-intro">
+
+				<img src="http://placehold.it/320x155" alt="" width="320" height="155"></div>
+
 			<div class="request-opinion">
 				<h2 class="request-opinion__call">оставьте свой отзыв</h2>
 				<p class="request-opinion__comment">
@@ -41,90 +41,99 @@
 				</p>
 			</div>
 
-			<form class="introduction-form" method="post">
-				<h2 class="">представьтесь, пожалуйста:</h2>
-				<label>
-					имя:
-					<input class="introduction-form__input-name" type="text" name="name" value="Петр" required></label>
-				<br>
-				<label>
-					фамилия:
-					<input class="introduction-form__input-name" type="text" name="surname" value="Иванов" required></label>
-				<br>
-				<label>
-					отчество:
-					<input class="introduction-form__input-name" type="text" name="middle-name" value="Александрович"></label>
-			</form>
+			<form class="user-info" method="post">
 
-			<form class="contacts-form" method="post">
-				<h2 class="contacts-form__info" >контактная информация:</h2>
+				<fieldset class="user-info__fieldset">
+					<legend class="user-info__legend">представьтесь, пожалуйста:
+					</legend>
+					<label for="name">имя:</label>
 
-				<label>
-					контактный телефон:
-					<input class="contact__phone" type="tel" name="phone-number" placeholder="Введите телефон" required></label>
-				<br>
-				<label>
-					электронная почта:
-					<input class="contacts__email" type="email" name="email-address" placeholder="Введите e-mail"></label>
-				<br></form>
+					<input class="user-info__input-field" type="text" name="name" placeholder="Петр" id="name" required>
+					<label for="surname">фамилия:</label>
+					<input class="user-info__input-field" type="text" name="surname" placeholder="Иванов" id="surname" required>
 
-			<h2 class="impressions__common">ваше общее впечатление:</h2>
-			<ul>
-				<li>
-					<input class="impressions__radio" type="radio" name="impressions" checked>Скорее положительное</li>
+					<label for="middle-name">отчество:</label>
+					<input class="user-info__input-field" type="text" name="middle-name" placeholder="Александрович" id="middle-name">
+				</fieldset>
 
-				<li>
-					<input class="impressions__radio" type="radio" name="experience">Скорее отрицательное</li>
-				<li>
-					<input class="impressions__radio" type="radio" name="experience">Затрудняюсь ответить</li>
-			</ul>
+				<fieldset class="user-info__fieldset">
+					<legend class="user-info__legend">контактная информация:
+					</legend>
 
-			<h2 class="impressions__visited">посещенные достопримечательности:</h2>
-			<ul>
-				<li>
-					<input class="impressions__checkbox" type="checkbox" name="chekbox" checked>Мост Дьявола</li>
+				<label for="phone">контактный телефон:
+				<input class="user-info__input-field" type="tel" name="phone-number" placeholder="Введите телефон" id="phone" required><span></span>
+</label>
+				<label for="email">электронная почта:
 
-				<li>
-					<input class="impressions__checkbox" type="checkbox" name="checkbox" checked>Слайд-парк</li>
+				<input class="user-info__input-field" type="email" name="email-address" placeholder="Введите e-mail" id="email"><span></span>
+				</label>
+			</fieldset>
+				
+				<fieldset class="user-info__fieldset">
+					<legend class="user-info__legend">ваше общее впечатление:
+					</legend>
+				<ul>
+					<li>
+						<input class="user-info__input-field"  type="radio" name="good-impress" id="impressions-good"  checked>
+						<label for="impressions-good">Скорее положительное</label>
 
-				<li>
-					<input class="impressions__checkbox" type="checkbox" name="checkbox" >Гора-Колокол</li>
-				<li>
-					<input class="impressions__checkbox" type="checkbox" name="checkbox" checked>Красные скалы</li>
-			</ul>
-			<h2 class="impressions__description-call">опишите свои эмоции:</h2>
+						<li>
 
-			<textarea class="impressions-description__text" name="text" cols="40" rows="10"  placeholder="Опишите подробно все свои восторги"></textarea>
-			<br>
-			<label>
-				<input type="submit" value="отправить отзыв"></label>
+							<input class="user-info__input-field" type="radio" name="bad-impress" id="impressions-bad"><label for="impressions-bad">Скорее отрицательное</label></li>
+						<li>
+							<input class="user-info__input-field" type="radio" name="experience" id="answer-problem"><label for="answer-problem">Затрудняюсь ответить</label></li>
+					</ul>
+				</fieldset>
 
-		</main>
-		<footer class="footer">
-			<div class="footer__hashtag">#visitsedona</div>
-			<ul class="footer-socials-list">
-				<li class="footer-socials-list__item">
-					<a href="https://twitter.com/?lang=ru" target="_blank">
-						<img src="http://placehold.it/40x40"  alt="twitter-link" width="40" height="40"></a>
-				</li>
-				<li class="footer-socials-list__item">
-					<a href="https://www.facebook.com" target="_blank">
-						<img src="http://placehold.it/40x40" alt="facebook-link"></a>
-				</li>
-				<li class="footer-socials-list__item">
-					<a href="https://www.youtube.com/?hl=ru" target="_blank">
-						<img src="http://placehold.it/40x40"  alt="youtube-link" width="40" height="40" ></a>
-				</li>
-			</ul>
-			<div class="footer-copyright">
-				<span class="footer-copiright__site-developer">разработано</span>
-				<a href="http://htmlacademy.ru" target="_blank">
-					<img src="http://placehold.it/40x40/"  width="40" 
+					<fieldset class="user-info__fieldset">
+					<legend class="user-info__legend">посещенные достопримечательности:
+					</legend>
+					<ul>
+						<li>
+							<input class="user-info__input-field" type="checkbox" name="chekbox" id="bridge" checked><label for="bridge">Мост Дьявола</label></li>
+
+						<li>
+							<input class="user-info__input-field" type="checkbox" name="checkbox" id="park" checked><label for="park">Слайд-парк</label></li>
+
+						<li>
+							<input class="user-info__input-field" type="checkbox" name="checkbox" id="mountain" ><label for="mountain">Гора-Колокол</label></li>
+						<li>
+							<input class="user-info__input-field" type="checkbox" name="checkbox" id="rocks" checked><label for="rocks">Красные скалы</label></li>
+					</ul>
+				</fieldset>
+
+					<fieldset class="user-info__fieldset">
+					<legend class="user-info__legend">опишите свои эмоции:
+					</legend>					
+					<textarea class="user-info__message" name="text" cols="40" rows="10"  placeholder="Опишите подробно все свои восторги"></textarea>
+				</fieldset>
+
+					<button class="user-info__su" type="submit" value="отправить отзыв"></button>
+				</form>
+
+			</main>
+			<footer class="page-footer">
+				<div class="page-footer__hashtag">#visitsedona</div>
+				<ul class="socials">
+					<li class="socials__item">
+						<a class="socials__link socials__link--twitter href="https://twitter.com/?lang=ru" target="_blank">twitter</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__link socials__link--facebook href="https://www.facebook.com" target="_blank">facebook</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__link socials__link--youtube href="https://www.youtube.com/?hl=ru" target="_blank">youtube</a>
+					</li>
+				</ul>
+				<div class="page-footer-copyright">
+					<span class="page-footer-copyright__site-developer">разработано</span>
+					<a href="http://htmlacademy.ru" target="_blank">
+						<img src="http://placehold.it/40x40/"  width="40" 
           height="40" alt="Логотип HTML academy"></a>
-			</div>
-		</footer>
+				</div>
+			</footer>
 
-	</div>
+		</div>
 
 </body>
-</html>
+	</html>
